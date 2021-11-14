@@ -4,7 +4,7 @@
 void import_matrix(int matrix[][MAX], int line, int column){
 	for(int i=0; i<line*column; i++){
 		printf("Matrix[%d][%d]: ", i/line, i%line);
-		scanf("%d", &matrix[i/line][i%line]);
+		scanf("%d", &matrix[i/column][i%column]);
 	}
 }
 void printf_matrix(int matrix[][MAX], int line, int column){
@@ -12,7 +12,7 @@ void printf_matrix(int matrix[][MAX], int line, int column){
 		if(i%line==0){
 			printf("\n");
 		}
-		printf("\t%d", matrix[i/line][i%line]);
+		printf("\t%d", matrix[i/column][i%column]);
 	}
 }
 
@@ -20,7 +20,7 @@ void printf_matrix(int matrix[][MAX], int line, int column){
 void sum_matrix(int matrix[][MAX], int line, int column){
 	int sum=0;
 	for(int i=0; i<line*column; i++){
-		sum+=matrix[i/line][i%line];
+		sum+=matrix[i/column][i%column];
 	}
 	printf("\nTong cac phan tu trong mang la: %d ", sum);
 }
